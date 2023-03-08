@@ -58,10 +58,10 @@ app.post('/', async (req, res) => {
             {role: "user", content: setup_prompt}
         ];
         const clientMessages = req.body.messages;
-        console.log("server - clientMessages", clientMessages);
+        // console.log("server - clientMessages", clientMessages);
 
         serverMessages = serverMessages.concat(clientMessages);
-        console.log("server - serverMessages", serverMessages);
+        // console.log("server - serverMessages", serverMessages);
 
         const response = await openai.createChatCompletion({
             model: modelName,
@@ -73,7 +73,7 @@ app.post('/', async (req, res) => {
             presence_penalty: 0,
             // stop: ["\"\"\""],
           });
-          console.log("response", response.data.choices[0]);
+        //   console.log("response", response.data.choices[0]);
         res.status(200).send({
             bot: response.data.choices[0].message.content
         })
@@ -84,5 +84,5 @@ app.post('/', async (req, res) => {
     }
 });
 
-app.listen(5555, () => console.log('Server is running on port http://localhost:5555'));
+app.listen(5555, () => console.log('Server is running...'));
 
