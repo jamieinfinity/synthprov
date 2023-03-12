@@ -99,6 +99,7 @@ const handleSubmit = async (e) => {
   // fetch data from server -> bot's response
   // console.log("client - clientMessages", clientMessages);
   const response = await fetch('https://synthprov.onrender.com', {
+  // const response = await fetch('http://localhost:5555', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'

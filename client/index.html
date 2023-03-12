@@ -7,6 +7,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Synthprov - Your Synthetic Improv Partner</title>
   <link rel="stylesheet" href="/style.css" />
+
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8K4Y0Z4XF5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-8K4Y0Z4XF5');
+</script>
 </head>
 
 <body>
@@ -19,9 +28,11 @@
         <h2>Your Synthetic Improv Partner</h2>
       </div>      
     </div>
+    <a href="https://twitter.com/intent/tweet?screen_name=jamieinfinity&ref_src=twsrc%5Etfw" class="twitter-mention-button" data-text="I have some feedback for SynthProv (https://synthprov.vercel.app/): " data-show-count="false">Tweet to @jamieinfinity</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>  
+
     <div id="chat_container"></div>
     <form>
-      <textarea name="prompt" rows="1" cols="1" placeholder="Type a prompt, or leave it blank and SynthProv will kick things off with a random prompt."></textarea>
+      <textarea name="prompt" rows="2" cols="1" placeholder="Type a prompt, or hit GO for a random prompt."></textarea>
       <button type="submit"><img src="assets/go-icon.svg" /> </button>
     </form>
   </div>
