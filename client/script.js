@@ -58,13 +58,23 @@ function chatStripe(isAi, value, uniqueId) {
 }
 
 function removeCharacterLabels(text) {
-  let newText = text.replace("Me: ", "");
-  if (newText.includes("Prompt:")) { 
-    newText = newText.replace("SynthProv: ", "\n");
+  let newText = text.replace("CHAR_2: ", "");
+  if (newText.includes("PROMPT:")) { 
+    newText = newText.replace("CHAR_1: ", "\n");
   } else {
-    newText = newText.replace("SynthProv: ", "");
+    newText = newText.replace("CHAR_1: ", "");
   }
   return newText;
+}
+
+function addCharacterLabels(numberOfMessages, text) {
+  let userInput = text;
+  if(numberOfMessages === 0 && userInput != '') {
+    userInput = "PROMPT: " + userInput.replace(/prompt:/i, "");
+  } else {
+    userInput = "CHAR_2: " + userInput;
+  }
+  return userInput;
 }
 
 const handleSubmit = async (e) => {
@@ -73,17 +83,14 @@ const handleSubmit = async (e) => {
   e.preventDefault();
   const data = new FormData(form);
   let userInput = removeCharacterLabels(data.get('prompt'));
-  if(clientMessages.length === 0 && userInput != '') {
-    userInput = "Prompt: " + userInput.replace("Prompt:", "");
-  }
-
   // user's chatstripe
-  clientMessages.push(
-    {role: "user", content: ("Me: " + userInput)}
-  );
   if(userInput !== '') {
     chatContainer.innerHTML += chatStripe(false, userInput);
   }
+
+  clientMessages.push(
+    {role: "user", content: addCharacterLabels(clientMessages.length, userInput)}
+  );
 
   form.reset();
   document.querySelector('textarea').placeholder = placeHolderText;
