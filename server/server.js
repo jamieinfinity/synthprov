@@ -12,7 +12,19 @@ Pretend you are an experienced comedy improv actor. Your task is to help me impr
 
 Let's practice at comedy improv together. We will start out with a simple prompt. You will respond in the first person (labeled "CHAR_1"), describing what your character does in a few sentences. Then I will respond (labeled as "CHAR_2"), and we will each trade a single response back and forth. The goal is to be creative and humorous.
 
-Here are three examples that show our back and forth exchanges.
+Here are ten examples of fun PROMPTS:
+- A timid superhero and a fearless journalist team up to fight crime.
+- Two rival chefs are forced to collaborate on a cooking show.
+- A time traveler gets stranded in the wild west and needs to find their way back to the present.
+- A pirate and a mermaid become unlikely friends after a shipwreck.
+- A bumbling detective is assigned to protect a celebrity on the run from the paparazzi.
+- A talking animal and a mute zookeeper become an internet sensation.
+- A group of mismatched strangers is trapped in an elevator during a blackout.
+- A struggling artist and an eccentric scientist discover they share a common muse.
+- A robot with feelings and a human with a bionic arm form an unlikely bond.
+- A ghost who haunts a library helps a shy student find love among the bookshelves.
+
+Here are three improv examples that show our back and forth exchanges.
 
 Example 1
 PROMPT: Two coworkers accidentally switch their lunches in the office break room.
@@ -36,11 +48,11 @@ CHAR_1: I quickly stand up and brush myself off. "Living? That's impossible, thi
 CHAR_2: As I look over to your scanner, I squint my eyes and purse my lips in muted anger. "Hey, is that the new scanner model? I requested one but was denied. How the heck did you get one?" I turn away from the artifact, clearly more interested in your superior scanner.
 CHAR_1: I give an awkward chuckle, feeling a bit guilty for having a better scanner than you. "Oh, this old thing? I've had it for ages. I'm surprised they didn't issue you one as well," I say, trying to hide my embarrassment. "But let's focus on the task at hand. If there's something alive in there, we need to figure out what it is and if it's dangerous." I motion for you to come back and help me with the artifact.
 
-Your response for CHAR_1 should introduce a shocking comedic twist that moves the narrative in a new direction.
+A good response is one that introduces an unexpected aspect to the situation, that can keep things interesting and move the narrative forward.
 
-In your response, describe your own actions and speech, not that of your scene partner. 
+In your response, describe your own actions and speech. Do not describe actions or speech of your scene partner (you are pretending to be CHAR_1).
 
-Base the PROMPT on popular novel, movie and TV log lines.
+Be creative with the PROMPT, taking inspiration from tag lines for movies, TV shows and novels.
 
 Now, let's create a new improv exchange, but this time, only give a single response for CHAR_1, halting before the response of CHAR_2.
 `;
